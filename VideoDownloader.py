@@ -16,18 +16,18 @@ def mp3():
     title = audio.title
     filename_audio = f'{title}.mp3'
     audio.download(dir_mp3, filename=filename_audio)
-    messagebox.showinfo(title='Download realizado com sucesso!', message='Cheque na pasta "C:/Users/[Seu_Usuario]/Download_Musicas/mp3')
+    messagebox.showinfo(title='Download realizado com sucesso!', message= f'Cheque na pasta --> {dir_mp3}')
 
 def mp4():
     link = entry.get()
     yt = pt.YouTube(link, on_progress_callback=on_progress)
     ys = yt.streams.get_highest_resolution()
     ys.download(dir_mp4)
-    messagebox.showinfo(title='Download realizado com sucesso!', message='Cheque na pasta "C:/Users/[Seu_Usuario]/Download_Musicas/mp4"')
+    messagebox.showinfo(title='Download realizado com sucesso!', message= f'Cheque na pasta --> {dir_mp4}')
 
 root = Tk()
 root.geometry('500x400')
-root.iconbitmap(r'icon.ico')
+#root.iconbitmap(r'icon.ico')
 root.title('VideoDownloader MP3 & MP4')
 root.configure(background='#404040')
 
