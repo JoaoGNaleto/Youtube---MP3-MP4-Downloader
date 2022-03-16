@@ -27,7 +27,7 @@ def mp4():
 
 root = Tk()
 root.geometry('500x400')
-#root.iconbitmap(r'icon.ico')
+root.iconbitmap(r'icon.ico')
 root.title('VideoDownloader MP3 & MP4')
 root.configure(background='#404040')
 
